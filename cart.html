@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart – NexaHome</title>
+  <meta name="description" content="Review items in your NexaHome shopping cart and proceed to checkout.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon"><i class="fa-solid fa-house-signal"></i></div>
+        <span>NexaHome</span>
+      </a>
+
+      <div class="nav-search">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" placeholder="Search smart appliances...">
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#products">Products</a></li>
+        <li><a href="index.html#features">Why Us</a></li>
+        <li><a href="index.html#newsletter">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+        <a href="index.html" class="nav-btn" title="Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge">0</span>
+        </a>
+        <button class="nav-btn mobile-menu-btn" onclick="toggleMobileMenu()" title="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cart Page -->
+  <section class="cart-page">
+    <div class="container">
+      <h1><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h1>
+
+      <!-- Empty Cart State -->
+      <div id="cart-empty">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <h2>Your cart is empty</h2>
+        <p>Looks like you haven't added any products yet. Start shopping to fill your cart!</p>
+        <a href="index.html" class="btn btn-primary btn-lg"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+      </div>
+
+      <!-- Filled Cart -->
+      <div id="cart-filled">
+        <div>
+          <div id="cart-items"></div>
+        </div>
+        <div class="cart-summary">
+          <h3>Price Details</h3>
+          <div id="cart-summary-details"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 NexaHome. All rights reserved.</p>
+        <div class="footer-payments">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-google-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
